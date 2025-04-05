@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int linhas = 3, colunas = 4;
+  int soma [linhas];
+  int mat[2][3];
+  
+  cout << "Digite todos os elementos da matriz: " << endl;
+  
+  for(int i = 0; i < linhas; i++){
+    for(int j = 0; j < colunas; j++){
+      cin >> mat[i][j];
+    }
+  }
+  
+  for(int i = 0; i < linhas; i++){
+    soma[i] = 0;
+  }
+  
+  for(int i = 0; i < linhas; i++){
+    for(int j = 0; j < colunas; j++){
+     soma[i] += mat[i][j];
+    }
+  }
+
+  for(int i = 0; i < linhas; i++){
+    for(int j = 0; j < colunas; j++){
+      cout << mat[i][j] << " ";
+    }
+    cout << endl;
+  }
+  
+  
+  for(int i = 0; i < linhas; i++){
+    cout << "Linha " << i + 1 << ": " << soma[i] << endl;
+  }
+return 0;
+}
