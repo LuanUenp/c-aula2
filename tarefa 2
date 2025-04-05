@@ -6,7 +6,7 @@ int main(){
   int x = 0, y = 1;
 
   for (int i = 0; i < 5; i++){
-    repetidos[i] = 0;
+    repetidos[i] = -1;
   }
   
   cout << "Digite todos os elementos do vetor: " << endl;
@@ -27,6 +27,7 @@ int main(){
   }
   cout << "Os elementos repetidos são: " << endl;
   for(int i = 0; i < x; i++){
+    if(repetidos[i] != -1)
     cout << repetidos[i] << endl;
   }
 
