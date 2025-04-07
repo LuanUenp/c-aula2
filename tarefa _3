@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int linha = 2, coluna = 3;
+  int linha2 = 3, coluna2 = 2;
+  int mat_1[linha][coluna], mat_2[linha2][coluna2];
+  int mat_resultado [linha][coluna2];
+  
+  cout << "Digite os valores da matriz 1: " << endl;
+  for(int i = 0; i < linha; i++){
+    for(int j = 0; j < coluna; j++){
+      cin >> mat_1[i][j];
+    }
+  }
+  
+  cout << "Digite os valores da matriz 2: " << endl;
+  for(int i = 0; i < coluna; i++){
+    for(int j = 0; j < linha; j++){
+      cin >> mat_2[i][j];
+    }
+  }
+  cout << endl;
+
+  for (int i = 0; i < linha; i++){
+    for (int j = 0; j < coluna; j++){
+      mat_resultado[i][j] = 0;
+      for(int k = 0; k < coluna; k++){
+        mat_resultado[i][j] += mat_1 [i][k] * mat_2[k][j];
+      }
+    }
+  }
+
+  cout << "Matriz resultante: " << endl;
+  for(int i = 0; i < linha; i++){
+    for(int j = 0; j < coluna2; j++){
+      cout << mat_resultado[i][j] << " ";
+    }
+    cout << endl;
+  }
+  
+  
+  return 0;
+}
